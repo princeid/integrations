@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/interswitch")
+@RequestMapping("/api/v2/quickteller")
 public class InterswitchController {
 
     private final InterswitchService interswitchService;
@@ -16,7 +16,7 @@ public class InterswitchController {
         this.interswitchService = interswitchService;
     }
 
-    @GetMapping("/getBillers")
+    @GetMapping("/billers")
     public GetBillerResponse getAllBillers(){
         return interswitchService.getBillers();
     }

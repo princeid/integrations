@@ -1,4 +1,4 @@
-package com.prince.integrations.providers.interswitch.services;
+package com.prince.integrations.providers.interswitch.services.impl;
 
 import com.prince.integrations.AbstractBillerService;
 import com.prince.integrations.exceptions.ApplicationException;
@@ -7,6 +7,7 @@ import com.prince.integrations.exceptions.InterswitchErrorResponse;
 import com.prince.integrations.providers.interswitch.pojo.AuthenticateRequest;
 import com.prince.integrations.providers.interswitch.pojo.AuthenticateResponse;
 import com.prince.integrations.providers.interswitch.pojo.GetBillerResponse;
+import com.prince.integrations.providers.interswitch.services.InterswitchService;
 import com.prince.integrations.utils.JsonUtils;
 import io.vavr.control.Try;
 import lombok.extern.slf4j.Slf4j;
