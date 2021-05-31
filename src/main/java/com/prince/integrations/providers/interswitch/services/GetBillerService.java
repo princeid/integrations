@@ -4,7 +4,7 @@ import com.prince.integrations.providers.interswitch.pojo.GetBillerResponse;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface InterswitchService {
+public interface GetBillerService {
 
     GetBillerResponse getBillers();
 }
