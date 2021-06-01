@@ -1,8 +1,6 @@
 package com.prince.integrations.providers.interswitch.controller;
 
-import com.prince.integrations.providers.interswitch.pojo.GetBillerResponse;
 import com.prince.integrations.providers.interswitch.pojo.QueryTransactionResponse;
-import com.prince.integrations.providers.interswitch.services.GetBillerService;
 import com.prince.integrations.providers.interswitch.services.QueryTransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +21,7 @@ public class QueryTransactionController {
         this.queryTransactionService = queryTransactionService;
     }
 
-    @GetMapping("/transactions/requery/{requestReference}")
+    @GetMapping("/transactions/{requestReference}")
     public QueryTransactionResponse queryTransaction(@PathVariable("requestReference") long requestReference){
 
         return queryTransactionService.queryTransaction(requestReference);
