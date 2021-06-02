@@ -3,7 +3,6 @@ package com.prince.integrations.providers.interswitch.services.impl;
 import com.prince.integrations.AbstractBillerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 
@@ -17,24 +16,22 @@ import static com.prince.integrations.utils.Commons.*;
 public class HeaderUtils extends AbstractBillerService {
 
     private static final Logger log = LoggerFactory.getLogger(CustomerValidationServiceImpl.class);
-//    @Autowired
-//    private Environment env;
 
+    private final String clientId = "";
 
-//    private final String clientId = "IKIA9614B82064D632E9B6418DF358A6A4AEA84D7218";
-//
-//    private final String secretKey = "XCTiBtLy1G9chAnyg0z3BcaFK4cVpwDg/GTw2EmjTZ8=";
-//
-//    private final String terminalId = "3XXT0001";
+    private final String secretKey = "";
 
-    @Value("${interswitch.client.id}")
-    private String clientId;
+    private final String terminalId = "";
 
-    @Value("${interswitch.secret.key}")
-    private String secretKey;
+//    @Value("${interswitch.client.id}")
+//    private String clientId;
+////
+//    @Value("${interswitch.secret.key}")
+//    private String secretKey;
+////
+//    @Value("${interswitch.terminal.id}")
+//    private String terminalId;
 
-    @Value("${interswitch.terminal.id}")
-    private String terminalId;
 
     protected HttpHeaders getHttpHeaders(String method, String url, final Logger log) throws UnsupportedEncodingException, URISyntaxException {
         HttpHeaders httpHeaders = super.getRestHttpHeaders();
