@@ -44,12 +44,6 @@ public class HeaderUtils extends AbstractBillerService {
         httpHeaders.set("TerminalId", terminalId);
         httpHeaders.set("Signature", generateSignature(method, url, time, nonce, clientId, secretKey, log));
 
-        log.info("Authorization ---> {} ", generateAuth(clientId) );
-        log.info("Nonce ---> {} ", nonce );
-        log.info("Timestamp ---> {} ", time );
-        log.info("TerminalId ---> {} ", terminalId );
-        log.info("Signature ---> {} ", generateSignature(method, url, time, nonce, clientId, secretKey, log) );
-
         return httpHeaders;
     }
 
